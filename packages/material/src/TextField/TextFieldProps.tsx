@@ -5,7 +5,7 @@ import { InputProps as StandardInputProps } from "../Input";
 import { InputBaseProps } from "../InputBase";
 import { InputLabelProps } from "../InputLabel";
 import { OutlinedInputProps } from "../OutlinedInput";
-//import { SelectProps } from "../Select";
+import { SelectProps } from "../Select";
 import { Theme } from "../styles";
 import { TextFieldClasses } from "./textFieldClasses";
 import { SxProps } from "@suid/system";
@@ -222,7 +222,7 @@ export interface TextFieldTypeMap<P = {}, D extends ElementType = "div"> {
     /**
      * Props applied to the [`Select`](/api/select/) element.
      */
-    //SelectProps?: Partial<SelectProps>;
+    SelectProps?: Partial<SelectProps>;
     /**
      * The size of the component.
      */

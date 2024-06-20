@@ -4,9 +4,9 @@ import FormHelperText from "../FormHelperText";
 import Input from "../Input";
 import InputLabel from "../InputLabel";
 import OutlinedInput from "../OutlinedInput";
+import Select from "../Select";
 import styled from "../styles/styled";
 import { TextFieldTypeMap } from "./TextFieldProps";
-// import Select from "../Select";
 import { getTextFieldUtilityClass } from "./textFieldClasses";
 import createComponentFactory from "@suid/base/createComponentFactory";
 import Dynamic from "@suid/system/Dynamic";
@@ -222,21 +222,20 @@ const TextField = $.component(function TextField({
       {...otherProps}
     >
       {label()}
-      {InputElement()}
-      {/*props.select ? (
+      {props.select ? (
         <Select
-          aria-describedby={helperTextId}
-          id={id}
-          labelId={inputLabelId}
+          aria-describedby={helperTextId()}
+          id={id()}
+          labelId={inputLabelId()}
           value={props.value}
-          input={InputElement}
-          {...props.SelectProps || {}}
+          input={InputElement()}
+          {...(props.SelectProps || {})}
         >
           {props.children}
         </Select>
       ) : (
-        InputElement
-      )*/}
+        InputElement()
+      )}
       {helperText()}
     </TextFieldRoot>
   );
